@@ -1,5 +1,5 @@
 # Ricky and Morty App
-Explore whole Ricky and Morty universe to find your favourite characters 🚀.
+Explore whole Ricky and Morty universe to find your favourite characters 🛸 🚀.\
 App avaliable at: https://app.netlify.com/sites/clever-thompson-d03eac/overview.
 
 
