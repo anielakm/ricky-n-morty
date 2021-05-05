@@ -81,17 +81,21 @@ class Favorites extends React.Component {
 
                 <div className="container">
 
-                    <Sort className="filters">
-                    
+                    {this.state.favCharacters.length > 0 ? 
+
+                        <Sort className="filters">
+                                            
                         Sort:
                         <select name="sort" id="sort" onChange={(e)=>this.handleSort(e.target.value,this.state.favCharacters)}>
                             <option value="default">Default</option>
                             <option value="az">A-Z</option>
                             <option value="za">Z-A</option>
                         </select>
-              
 
-                    </Sort>
+                        </Sort>
+                    
+                    : null}
+                   
                         {
                             this.state.favCharacters.length > 0 ? (
                                 <ul className="characters-list">
@@ -101,7 +105,7 @@ class Favorites extends React.Component {
                                 ))}
                 
                             </ul>
-                            ) : (<NoFav><p>There is no favourite characters yet. <br/>Use <AiOutlineHeart /> to add them to the list.</p></NoFav>)
+                            ) : (<NoFav><p>There are no favourite characters yet. <br/>Use <AiOutlineHeart /> to add them to the list.</p></NoFav>)
                         
                         }
                     

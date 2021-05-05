@@ -17,11 +17,24 @@ const Character = styled.article`
         justify-content: center;
         background-color: white;
         cursor: pointer;
+        transition: all .3s;
+
+
+        .fill{
+            display: none;
+        }
+        &:hover .fill {
+            display: inline-block;
+        }
+        &:hover .outline{
+            display: none;
+        }
 
         svg {
            
             fill: var(--blue);
             font-size: 20px;
+            transition: all .3s;
         
         }
     }

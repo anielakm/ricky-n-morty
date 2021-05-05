@@ -149,7 +149,7 @@ const SearchPopup = styled.aside`
     .close {
         position: absolute;
         top: 0;
-        right: 0;
+        right: 30px;
         transition: all .3s;
         cursor: pointer;
         font-size: 20px;
@@ -243,7 +243,11 @@ const Header = ({isCurrentPageIndex, handleChangePage, handleSearch}) => (
                     <ul>
                       
                         <li onClick={()=>handleChangePage(true)} className={isCurrentPageIndex ? 'active' : ''} >all characters</li>
-                        <li onClick={()=>handleChangePage(false)} className={isCurrentPageIndex ? '' : 'active'}>favorites</li>
+                        <li onClick={()=>
+                            {handleChangePage(false);
+                                document.querySelector('.search-btn').classList.remove('active');
+                                document.querySelector('.search-popup').classList.remove('active');
+                            }} className={isCurrentPageIndex ? '' : 'active'}>favorites</li>
                     </ul>
                 </nav>
 

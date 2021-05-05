@@ -7,6 +7,7 @@ const Sort = styled.div`
     justify-content: flex-end;
     align-items: center;
     width: 100%;
+    min-height: 34px;
     
     select {
         border: 1px solid var(--blue);

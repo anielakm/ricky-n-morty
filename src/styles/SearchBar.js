@@ -4,33 +4,50 @@ const SearchBar = styled.div`
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 15px;
     font-size: 14px;
     width: 100%;
 
+    @media (max-width: 767.9px){
+        justify-content: center;
+    }
+    
+
     .results, .clear {
         opacity: 0;
         z-index: -1;
-    }
 
-    &.active {
-        .results, .clear {
+        @media (max-width: 767.9px){
             opacity: 1;
-            z-index: 0;
+            z-index: 1;
+            display: none;
         }
     }
 
     .results {
         display: flex;
         align-items: flex-end;
+        flex-wrap: wrap;
         font-weight: 600;
-        
+
+        @media (max-width: 767.9px){
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 18px;
+            display: none;
+        }
+    
     }
 
     .buttons {
         display: flex;
         justify-content: flex-end;
+
+        @media (max-width: 767.9px){
+            width: 100%
+        }
     }
 
     ul {
@@ -56,6 +73,20 @@ const SearchBar = styled.div`
         li:last-of-type:after {
             content: ''
         }
+    }
+
+    &.active {
+        .results, .clear {
+            @media (min-width: 768px){
+                opacity: 1;
+                z-index: 0;
+            }
+
+            @media (max-width: 767.9px){
+                display: flex;
+            }
+        }
+
     }
 
 `

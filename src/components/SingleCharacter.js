@@ -33,7 +33,7 @@ const SingleCharacter = ({character, handleFav, isCharacterInFav}) => (
         </div>
         
         <button onClick={()=> {handleFav(character);}}>
-            {isCharacterInFav(character) ? <AiFillHeart/> : <AiOutlineHeart /> }
+            {isCharacterInFav(character) ? <AiFillHeart/> : (<span><AiOutlineHeart className="outline" /><AiFillHeart className="fill"/></span>) }
         </button>
        
 

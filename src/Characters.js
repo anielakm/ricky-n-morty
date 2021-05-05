@@ -1,7 +1,7 @@
 import React from 'react';
 import SingleCharacter from './components/SingleCharacter'
 import {GrClose} from 'react-icons/gr'
-import {BiSearch} from 'react-icons/bi'
+import {BsFilterRight} from 'react-icons/bs'
 import List from './styles/List'
 import Button from './styles/Button'
 import ButtonSmall from './styles/ButtonSmall'
@@ -34,8 +34,8 @@ const Characters = ({characters, loadmore, nextPage, handleFav, isCharacterInFav
                             document.querySelector('.search-btn').classList.add('active');
                             document.querySelector('.search-popup').classList.add('active');
                         }} > 
-                        Search 
-                    <BiSearch / >
+                        Filters 
+                    <BsFilterRight class="filter" / >
                     </ButtonSmall>
 
                 </div>

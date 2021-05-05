@@ -2,6 +2,11 @@ import styled from 'styled-components'
 
 const List = styled.section`
   margin: 50px 0 30px ;
+  min-height: calc(100vh - 59px - 136px - 80px);
+
+  @media (min-width: 768px){
+    min-height: calc(100vh - 59px - 97px - 80px);
+  }
 
     ul.characters-list {
         list-style: none;
@@ -9,6 +14,7 @@ const List = styled.section`
         margin: 0;
         display: flex;
         flex-wrap: wrap;
+        
         
         li {
             /* max-width: 19%; 
@@ -49,6 +55,15 @@ const List = styled.section`
 
             :hover {
                 transform: scale(1.05);
+
+                button {
+                    width: 40px;
+                    height: 40px;
+
+                    svg {
+                        font-size: 32px;
+                    }
+                }
             }
 
             
