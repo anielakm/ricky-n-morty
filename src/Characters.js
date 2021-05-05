@@ -16,7 +16,7 @@ const Characters = ({characters, loadmore, nextPage, handleFav, isCharacterInFav
 
             <SearchBar className={searchActive ? 'active' : ''}>
                 <div className="results">
-                {error === 'There is nothing here' ? 'There is no results for:' : 'Results for:' }
+                    {error === 'There is nothing here' ? 'There is no results for:' : 'Results for:' }
                     <ul>
                         {searchName ? (<li>name: <span>{searchName}</span></li>) : null}
                         {searchGender ? <li>gender: <span>{searchGender}</span></li> : null}
